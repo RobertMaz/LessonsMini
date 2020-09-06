@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>first</module>
+        <module>JDBCmodul</module>
     </modules>
 
     <properties>
