@@ -9,8 +9,11 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>first</module>
         <module>JDBCmodul</module>
+        <module>hibernate_JDBC</module>
+        <module>JavaEE_GeekBrains</module>
+        <module>EEJava</module>
+        <module>LetsCode</module>
     </modules>
 
     <properties>
