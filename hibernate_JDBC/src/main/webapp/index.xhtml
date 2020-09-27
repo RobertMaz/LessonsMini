@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>First Title</title>
+</head>
+
+<body>
+<h2>Hello friend!</h2>
+<br/>
+<form method="post" action="allUsers.xhtml?faces-redirect=true">
+    <table border="1">
+        <tr>
+            <td>name</td>
+            <td><input name="userName"/></td>
+        </tr>
+        <tr>
+            <td>city</td>
+            <td><input name="userCity"/></td>
+        </tr>
+        <tr>
+            <td>age</td>
+            <td><input type="number" name="userAge" value="0"/></td>
+        </tr>
+    </table>
+    <button type="submit">Send</button>
+</form>
+<br/>
+<form method="get" action="allUsers">
+    <button type="submit">Peek all people</button>
+</form>
+<form method="get" action="mainPage">
+    <tr>
+        <td>enter id</td>
+    </tr>
+    <tr>
+        <td><input name="personId"/></td>
+    </tr>
+    <button type="submit">Search person</button>
+</form>
+<br/>
+</body>
+</html>
