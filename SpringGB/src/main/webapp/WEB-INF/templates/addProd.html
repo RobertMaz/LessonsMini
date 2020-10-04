@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<br/>
-Add new product
-<form th:action="@{/products/add}" th:object="${product}" method="POST">
-    <input type="text" name="title" placeholder="Enter Title"/>
-    <input type="number" name="cost" placeholder="Enter Cost"/>
-    <input type="submit" value="submit"/>
+<form method="post" action="">
+
+    <input name="id" type="number">
+    <input name="title" type="text">
+    <input name="cost" type="number">
+    <button type="submit">Enter</button>
 </form>
+
 </body>
 </html>

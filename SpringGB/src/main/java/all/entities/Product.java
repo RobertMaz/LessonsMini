@@ -1,26 +1,26 @@
-package com.innopolis.entity;
+package all.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 
 @Entity
+@Table(name = "product")
 @Data
-@Table
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
     private Long id;
 
-    @Column
     private String title;
 
-    @Column
     private int cost;
 }
+

@@ -24,7 +24,7 @@
         </mvc:message-converters>
     </mvc:annotation-driven>
 
-    <context:component-scan base-package="com.innopolis"/>
+    <context:component-scan base-package="all"/>
 
     <bean id="templateResolver" class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
         <property name="prefix" value="/WEB-INF/templates/"/>
@@ -41,23 +41,20 @@
         <property name="characterEncoding" value="UTF-8"/>
     </bean>
 
-    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/datas?createDatabaseIfNotExist=true&amp;allowPublicKeyRetrieval=true&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC"/>
-        <property name="user" value="root"/>
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/datas?useUnicode=true&amp;serverTimezone=UTC&amp;useSSL=false"/>
+        <property name="username" value="root"/>
         <property name="password" value="123456"/>
-        <property name="minPoolSize" value="1"/>
-        <property name="maxPoolSize" value="5"/>
-        <property name="maxIdleTime" value="30000"/>
     </bean>
 
     <tx:annotation-driven/>
 
-    <jpa:repositories base-package="com.innopolis.repositories"/>
+    <jpa:repositories base-package="all.repositories"/>
 
     <bean id="entityManagerFactory"
           class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-        <property name="packagesToScan" value="com.innopolis"/>
+        <property name="packagesToScan" value="all.entities"/>
         <property name="dataSource" ref="dataSource"/>
 
         <property name="jpaProperties">

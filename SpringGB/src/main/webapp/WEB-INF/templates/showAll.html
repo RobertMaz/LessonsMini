@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr th:each="prod : ${products}">
+        <td th:text="${prod.id}"></td>
+        <td th:text="${prod.title}"></td>
+        <td th:text="${prod.cost}"></td>
+
+    </tr>
+</table>
+<form action="1" method="get">
+    <input name="minCost" type="number">
+    <button type="submit">Sort</button>
+</form>
+<br/>
+<a href="add">add</a>
+</body>
+</html>
