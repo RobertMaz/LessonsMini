@@ -15,6 +15,7 @@
         <module>EEJava</module>
         <module>LetsCode</module>
         <module>EEHib</module>
+        <module>SpringGB</module>
     </modules>
 
     <properties>

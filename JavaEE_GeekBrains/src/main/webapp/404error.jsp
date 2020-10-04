@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  allClasses.User: MyComp
+  allClasses.ent.User: MyComp
   Date: 20.09.2020
   Time: 17:02
   To change this template use File | Settings | File Templates.

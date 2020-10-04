@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="allClasses.UserDBConnection" %>
-<%@ page import="allClasses.User" %>
+<%@ page import="allClasses.ent.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -21,7 +21,7 @@
         <td>Age</td>
     </tr>
 
-    <% for (User user : users.select()) {%>
+    <% for (ent.User user : users.select()) {%>
     <tr>
         <td><%= user.getId() %>
         </td>

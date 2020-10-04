@@ -3,9 +3,6 @@ package control;
 
 import persist.City;
 
-import javax.enterprise.context.SessionScoped;
-import javax.inject.Inject;
-import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
@@ -14,14 +11,13 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Optional;
 
-@SessionScoped
-@Named
+
 public class CityRepo implements Serializable {
 
     @PersistenceContext(unitName = "ds")
     private EntityManager em;
 
-    @Inject
+
     private UserTransaction ut;
 
     public CityRepo() {
